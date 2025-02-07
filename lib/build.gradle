@@ -28,19 +28,23 @@ android {
         }
     }
 
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
 
 publishing {
     publications {
         release(MavenPublication) {
-            from components.release
             groupId = 'com.github.bingoHams'
             artifactId = 'RxPermissions'
             version = '1.0.0'
             
-            // 添加组件内容定义
             afterEvaluate {
                 from components.release
-                artifact("$buildDir/outputs/aar/lib-release.aar") // 匹配 workflow 中的 AAR 路径
             }
         }
     }
@@ -50,11 +54,10 @@ publishing {
             url = uri("https://maven.pkg.github.com/bingoHams/RxPermissions")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("TOKEN_KKOOO") // 修改为与 workflow 中相同的 token 名称
+                password = System.getenv("TOKEN_KKOOO")
             }
         }
     }
-}
 }
 
 dependencies {
