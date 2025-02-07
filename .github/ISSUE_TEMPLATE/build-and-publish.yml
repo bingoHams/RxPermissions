@@ -1,0 +1,35 @@
+name: Build and Publish AAR
+
+on:
+  push:
+    branches:
+      - main # 触发分支
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build AAR
+        run: ./gradlew :mylibrary:assembleRelease # 替换为你的库模块名称
+
+      - name: Upload AAR as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mylibrary-release.aar
+          path: mylibrary/build/outputs/aar/mylibrary-release.aar # 替换为你的 AAR 路径
