@@ -26,10 +26,17 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build AAR
-        run: ./gradlew :mylibrary:assembleRelease # 替换为你的库模块名称
+        run: ./gradlew :lib:assembleRelease # 替换为你的库模块名称
 
       - name: Upload AAR as artifact
         uses: actions/upload-artifact@v3
         with:
           name: mylibrary-release.aar
-          path: mylibrary/build/outputs/aar/mylibrary-release.aar # 替换为你的 AAR 路径
+          path: mylibrary/build/outputs/aar/lib-release.aar # 替换为你的 AAR 路径
+
+
+      - name: Publish to GitHub Packages
+        run: |
+          ./gradlew :mylibrary:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_KKOOO }}   
