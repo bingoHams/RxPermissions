@@ -31,9 +31,8 @@ jobs:
       - name: Upload AAR as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: mylibrary-release.aar
-          path: mylibrary/build/outputs/aar/lib-release.aar # 替换为你的 AAR 路径
-
+          name: RxPermissions-release.aar
+          path: lib/build/outputs/aar/lib-release.aar
 
       - name: Publish to GitHub Packages
         run: |
