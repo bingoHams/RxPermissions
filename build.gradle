@@ -17,43 +17,43 @@ allprojects {
     }
 }
 
-// ext {
-//     minSdkVersion = 14
-//     compileSdkVersion = 29
-//     targetSdkVersion = compileSdkVersion
+ext {
+    minSdkVersion = 14
+    compileSdkVersion = 29
+    targetSdkVersion = compileSdkVersion
 
-//     rxJava = 'io.reactivex.rxjava3:rxjava:3.0.4'
-//     junit = 'junit:junit:4.13'
-//     mockito = 'org.mockito:mockito-core:3.3.3'
+    rxJava = 'io.reactivex.rxjava3:rxjava:3.0.4'
+    junit = 'junit:junit:4.13'
+    mockito = 'org.mockito:mockito-core:3.3.3'
 
-//     androidXFragment = 'androidx.fragment:fragment:1.2.5'
-//     androidXAnnotation = 'androidx.annotation:annotation:1.1.0'
-//     androidXAppcompat =  'androidx.appcompat:appcompat:1.1.0'
+    androidXFragment = 'androidx.fragment:fragment:1.2.5'
+    androidXAnnotation = 'androidx.annotation:annotation:1.1.0'
+    androidXAppcompat =  'androidx.appcompat:appcompat:1.1.0'
 
-//     robolectricVersion = '4.3.1'
-//     robolectric = "org.robolectric:robolectric:$robolectricVersion"
-//     robolectricShadowsSupport = "org.robolectric:shadows-support-v4:$robolectricVersion"
-//     // Workaround for https://github.com/robolectric/robolectric/issues/1932
-//     khronosOpenGLApi = "org.khronos:opengl-api:gl1.1-android-2.1_r1"
+    robolectricVersion = '4.3.1'
+    robolectric = "org.robolectric:robolectric:$robolectricVersion"
+    robolectricShadowsSupport = "org.robolectric:shadows-support-v4:$robolectricVersion"
+    // Workaround for https://github.com/robolectric/robolectric/issues/1932
+    khronosOpenGLApi = "org.khronos:opengl-api:gl1.1-android-2.1_r1"
 
-//     bintrayRepo = 'tbruyelle'
-//     bintrayName = 'RxPermissions3'
+    bintrayRepo = 'tbruyelle'
+    bintrayName = 'RxPermissions3'
 
-//     publishedGroupId = 'com.tbruyelle.rxpermissions3'
-//     artifact = 'rxpermissions'
-//     libraryName = 'RxPermissions'
-//     libraryVersion = '0.9.5'
+    publishedGroupId = 'com.tbruyelle.rxpermissions3'
+    artifact = 'rxpermissions'
+    libraryName = 'RxPermissions'
+    libraryVersion = '0.9.5'
 
-//     libraryDescription = 'A wrapper for Android 6.0 permissions'
+    libraryDescription = 'A wrapper for Android 6.0 permissions'
 
-//     siteUrl = 'https://github.com/tbruyelle/RxPermissions'
-//     gitUrl = 'https://github.com/tbruyelle/RxPermissions.git'
+    siteUrl = 'https://github.com/tbruyelle/RxPermissions'
+    gitUrl = 'https://github.com/tbruyelle/RxPermissions.git'
 
-//     developerId = 'tbruyelle'
-//     developerName = 'Thomas Bruyelle'
-//     developerEmail = 'thomas.bruyelle@gmail.com'
+    developerId = 'tbruyelle'
+    developerName = 'Thomas Bruyelle'
+    developerEmail = 'thomas.bruyelle@gmail.com'
 
-//     licenseName = 'The Apache Software License, Version 2.0'
-//     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-//     allLicenses = ["Apache-2.0"]
-// }
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
